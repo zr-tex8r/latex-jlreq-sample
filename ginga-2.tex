@@ -1,0 +1,20 @@
+% upLaTeX文書
+\documentclass[uplatex,tate,book,paper=a6,fontsize=9pt,
+    % 括弧は段落頭二分行頭天付き, 句読点ぶら下げ有効
+    open_bracket_pos=nibu_tentsuki,hanging_punctuation]{jlreq}
+\usepackage{bxpapersize}
+\usepackage{pxrubrica}
+\rubysetup{<hj>}
+\ModifyHeading{chapter}{% 章見出しの体裁
+    indent=3zw,label_format={\thechapter 、}}
+\ModifyPageStyle{headings}{%片柱にする
+    mark_format={_chapter={\thechapter 、#1}},
+    odd_running_head={_chapter},even_running_head={}}
+\pagestyle{headings}
+\title{銀河鉄道の夜}
+\author{宮沢賢治}
+\date{}
+\begin{document}
+\maketitle
+\input{ginga-text}
+\end{document}
